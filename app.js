@@ -1,12 +1,12 @@
 require("dotenv").config();
 const express = require("express");
-const cors require("cors");
+const cors = require("cors");
 const session = require("express-session");
-const cookieParser = require("cookie-Parser");
+const cookieparser = require("cookie-parser");
 const path = require("path");
 const mongoose = require("mongoose");
 const passport = require("passport");
-require routes = require("./routes");
+const routes = require("./routes");
 const jwt = require("jsonwebtoken");
 const fs = require("fs");
 const marked = require("marked");
@@ -28,7 +28,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookiesParser());
 const MongoStore = require("connect-mongo")(session);
-const connection mongoose.createConnection(process.env.MONGO_URI, {
+const connection = mongoose.createConnection(process.env.MONGO_URI, {
   useNewUrlPaser: true,
   useUnifiedTopology: true,
 });
